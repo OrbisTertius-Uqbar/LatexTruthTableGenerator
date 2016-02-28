@@ -9,9 +9,10 @@ class Stack:
     def push(self, thing):
         self.stack = [thing] + self.stack
     def pop(self):
-        thing = self.stack[-1] if not self.stack == [] else []
+        thing = self.stack[-1]
         self.stack = self.stack[:len(self.stack)-1]
         return thing
+
 
 def filter(l):
     nl = []
