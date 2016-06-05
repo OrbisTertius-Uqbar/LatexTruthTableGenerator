@@ -48,6 +48,10 @@ def getTAs(p):
     return assigns
 
 def makeMathMode(word, piecewise = True):
+    texTable = {And : "\wedge",
+                Or  : "\\vee",
+                Nor : "\\neg",
+                }
      if piecewise == True:
          tokens = []
          for token in word:
@@ -90,7 +94,6 @@ def makeStatement(prop, ta):
         t = 0
         for l in prop:
             if a == l:
-
                 newProp[t] = ta[s]
             t = t + 1
         s = s + 1
